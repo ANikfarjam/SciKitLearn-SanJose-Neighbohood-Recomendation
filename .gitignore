@@ -1,0 +1,3 @@
+*.csv
+resultDFs/
+__pycache__/
