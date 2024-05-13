@@ -31,7 +31,7 @@ student_rental = rentals_prefrences(1)
 student_rental.rename(columns={'Postal Code':'zip'},inplace=True)
 print(student_rental.head())
 
-master_df = pd.read_csv('zipsdf.csv')
+master_df = pd.read_csv('zipdic.csv')
 master_df = master_df[['zip']]
 master_df['zip'] = master_df['zip'].astype(int)
 print(master_df.head())
@@ -40,6 +40,7 @@ master_df = pd.concat([master_df, health_df], axis=1, join='inner')
 master_df = pd.concat([master_df, student_rental], axis=1, join='inner')
 master_df = master_df.iloc[:, [0, 2, 4, 6]]
 print(master_df.head())
+master_df.to_csv('master_train.csv', index=False)
 #set up traning data sets
 X = master_df.copy()
 scaler = StandardScaler()

@@ -6,9 +6,19 @@ Martinez and etal, identified the neads of students as offordable housing, acces
 
 In mt project I collected data from San Jose Open Portal and apartments.com API to extract and manipulate data. I used Kmean Clustering to classify, which a unsupervised Model that would help me classify the neighborhood by clustering them based on the features.  
 
-sj classified neighborhood
+## model selection
+
+After preprocessing data and gaining insight about the correlation between each data, the next task is to find an appropriate model to make classification optimal. they vary on performance and how data should be prepared for them. For the purpose of this proposal, the performance of  KNearest Neighbors (KNN), K Mean Clustering, and Hirecial Clustering is compared
+
+!['ModelSelection'](ModelComparison.png) 
+
+From the conducted comparison analysis, it could be deduced that K Means Clustering outperforms the other models.
+
+## sj classified neighborhood
 
 !['result'](result.png)
+
+
 
 Through my analysis I am also going to show some visuals such as graphs and tables to gain insightful results
 
